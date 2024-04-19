@@ -1,0 +1,335 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif; 
+    list-style: none; /* li 도트 제거 */
+    text-decoration: none; /* 텍스트 바로가기 밑줄 및 색깔 제거 */
+    border-collapse: collapse; /* 표(테이블)의 셀 테두리 사이들의 줄 간격을 줄여줌 (separate는 셀 들의 간격 영역을 줄로 넓혀 표시.) */
+    margin: 0px; /*보이는 화면과의 여백을 의미. */
+    padding: 0px; /* 마진 안의 영역, 콘텐츠(요소)를 감싸는 상자의 여백을 의미. 콘텐츠들 간의 구별로도 사용. */
+    color: black; /* 기본 폰트 색깔 */        
+}
+/* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓글씨 폰트 모음↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+h1{
+    font-size: 48px;
+}
+.contents1{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.contents1_bold{
+    font-size: 18px;
+    font-weight:bold;
+}
+.contents3{
+    font-size: 20px;
+    font-weight: 100; 
+    margin-left: 20px;
+}
+.contents3 > h2{
+    margin-top: 30px;
+}
+.contents3 > .contents3_font{
+    font-family: sans-serif;
+    
+}
+.result{
+    font-size: 24px;
+    font-weight: lighter;
+}
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑글씨 폰트 모음↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+/* ------------------------------------ ★ 인트로 배경 시작 ★ ------------------------------------ */
+.intro_bg{
+    background-image: url('homepage/image/intro.png');
+    width: 100%; /* 보더 포함 100%의 영역 사용 */
+    height: 718px; /* 높이 718 */
+}
+/* ------------------------------------ 인트로 배경 끝 ------------------------------------ */
+/* ----------------------------------- 인트로 글꼴 시작 ------------------------------------ */
+.intro_text{
+    width: 100%;
+    margin:40px auto;
+    /* margin은 각각 위치가 (상)-(우)-(하)-(좌)의 시계 방향을 의미함. */
+    text-align: center; /* 텍스트 정렬 */
+}    
+
+.intro_text >h1,
+.intro_text > h4{
+    color: #fff;
+}
+/* ----------------------------------- 인트로 글꼴 끝 ------------------------------------ */
+
+
+
+/* ---------------------------------- ★ 윗쪽 헤드 영역 시작 ★ ---------------------------------- */
+.header{ /* 윗쪽 헤더영역 */
+    display:flex; /* 중앙 위치 */
+    width:1280px;
+    height: 82px;
+    margin:auto; /* 헤더 마진 자동 정렬*/
+}
+/* ----------------------------------------- 검색창 시작 ----------------------------------------- */
+.searchAarea{
+    width:300px;
+    height:40px;
+    margin-top: 24px; /* 마진 윗쪽 영역을 24px로 잡아줌. */
+    background:rgba(0,0,0,0.5);
+    border-radius: 5px; /* 모서리부분 라운드 5px */
+}
+.searchAarea > form > input{ /* 검색 영역 안에 있는 검색창 */
+    border: none; /* round 해제 */
+    width: 250px; /* 검색창 넓이 */
+    height: 40px; /* 검색창 높이 */
+    background-color: rgba(0,0,0,0); /* 백그라운드 배경 무 */
+    color: #fff; /* 검색창 안에 들어가는 글씨 색상 */
+    padding-left: 0px; /* 검색창과 컨텐츠 간 패딩 영역 왼쪽에 10px만큼 여유를 줌. */
+    text-indent: 15px;
+}
+.searchAarea > form > span{
+    width: 50px;
+    color: #fff;
+    font-weight: bold; /* 폰트 굵기 굵게. */
+    cursor: pointer; /* 검색에 커서를 올리면 포인터 모양이 됨. */
+}
+/* ----------------------------------------- 검색창 끝 ----------------------------------------- */
+/* ----------------------------------------- 메뉴 시작 --------------------------------------- */
+.nav{ 
+    display:flex;
+    justify-content: flex-end; /* nav의 컨텐츠들을 보더의 끝(오른쪽)으로 정렬. */
+    width:calc(1280px - 300px); /* calc쓸 때 가로 영역 마이너스에 스페이스 띄어줘야함. */
+    line-height: 86px; /* 컨텐츠 박스의 줄라인 간격을 82px(헤더 높이)로 맞춰주면서 가운데 정렬. */
+}
+.nav > li{ /*nav 클래스의 자식 속성이라 > 붙여줌*/
+    margin-left:84px; /* nav class 안의 li 자식들의 왼쪽 마진을 각각 84px로 주겠다는 뜻. */    
+}
+.nav > li > a{
+    color: #fff;
+}
+/* ----------------------------------------- 메뉴 끝 --------------------------------------- */
+/* ---------------------------------- 윗쪽 헤드 영역 끝 ---------------------------------- */
+
+
+/* ----------------------------------- ★ 누적 기록 영역 시작 ★ ----------------------------------- */
+.records{
+    position: relative; /* 위치 - 다른 태그들에 영향을 미치지 않으면서 현재 위치(relative) 유지 */
+    top: -66px; /* 현재(relative) 위치에서 위로 66px만큼 올려줌 */
+    display: flex;
+    width: 1280px;
+    background: white;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* 각각 좌측-하측-농도, 방향은 -(마이너스)로 조절. */
+    
+}
+.records > li{
+    height: 132px;
+    flex: 1;
+}
+.records > li > div{
+    text-align: center;
+    margin-top: 37px;
+    height: 57px;
+}
+.records > li > div{
+    border-right: 1px solid #e1e1e1;
+}
+/* ----------------------------------- 누적 기록 영역 끝 ----------------------------------- */
+
+
+
+/* ----------------------------------- ★ 어바웃 영역 시작 ★ ----------------------------------- */
+/* ----------------------------------- 어바웃 영역 텍스트 시작 ----------------------------------- */
+.main_text0{
+    width: 100%;
+    height:650px;
+    background: #f1f2f3;
+    margin-top: -132px;
+}
+.main_text0 > h1 {
+    padding-top: 116px;
+    text-align: center;
+}
+.main_text0 > .contents1{
+    text-align: center;
+}
+/* ----------------------------------- 어바웃 영역 텍스트 끝 ----------------------------------- */
+/* ----------------------------------- 어바웃 영역 아이콘 시작 ----------------------------------- */
+.icons{
+    display:flex;
+    justify-content: center;
+    width: 1280px;
+    height: 400px;
+    margin: 0 auto;
+}
+.icons > li{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-top: 35px;
+    height: 300px;
+    text-align: center;
+}
+.icons > li > .icon_img{
+    margin-top: 25px;
+}
+.icons > li > .icon_img1{
+    margin-top: 20px;
+}
+.icons > li:not(:last-child){
+    margin-right: 50px;
+}
+.icons .contents3{
+    width: 350px;
+    margin-top: 13px;
+    margin: 0 auto;
+    letter-spacing: -1px;
+}
+
+/* ----------------------------------- 어바웃 영역 아이콘 끝 ----------------------------------- */
+/* ----------------------------------- 어바웃 영역 버튼 시작 ----------------------------------- */
+.more{
+    width: 100px;
+    height: 30px;
+    background: #2f7af4;
+    color: white;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 25px auto;
+    border-radius: 2px;
+}
+.button{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border-top-left-radius: 5px;
+    border-radius: 5px;
+    margin-right:-4px;
+    margin-top: 20px;
+    border: 1px solid #2f7af4;
+    background-color: rgba(0,0,0,0);
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    background: #2f7af4;
+}
+/* ----------------------------------- 어바웃 영역 버튼 끝 ----------------------------------- */
+
+
+
+/* ----------------------------------- ★ 메세지 영역 시작 ★ ----------------------------------- */
+/* ------------------------- 메세지 본문 영역 사이즈 및 텍스트 폰트 시작 --------------------- */
+.main_text1{
+    width:100;
+    height:659px;
+    background-color: rgba(117, 215, 139, 0.3);
+}
+.main_text1 > h1{
+    padding-top: 60px;
+    text-align: center;
+}
+.main_text1 > .contents1{
+    text-align: center;
+}
+.message{
+    width:1280px;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    margin-top: 50px;
+    height: 427px;
+  
+}
+.message > .contents3{
+    padding: 20px;
+}
+.message > .contents3 > h2{
+    margin-bottom: 27px;
+}
+/* ------------------------- 메세지 본문 영역 사이즈 및 텍스트 폰트 끝 --------------------- */
+
+
+/* ----------------------------------- ★ 구독 영역 시작 ★ ----------------------------------- */
+
+/* ------------------------- 구독 본문 영역 사이즈 및 텍스트 폰트 시작 --------------------- */
+
+.section3_container{
+    display: flex;
+    justify-content: center;
+}
+.section3_container .textarea1_container,
+.section3_container .textarea2_container{
+    width: 50%;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section3_container .textarea1_container{
+    background-image: url(/homepage/image/dontgiveup.jpg);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.section3_container .textarea2_container{
+    background-image: url(/homepage/image/cooperation.jpg);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.textarea1_container .textarea1_text, .textarea2_container .textarea2_text{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.textarea1_container .textarea1_text > h1, .textarea1_container .textarea1_text > h2{
+    color: black;
+    -webkit-text-stroke: 0.5px white;
+}
+.textarea2_container .textarea2_text > h1, .textarea2_container .textarea2_text > h2{
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ------------------------- 구독 본문 영역 사이즈 및 텍스트 폰트 끝 --------------------- */
+
+/* ----------------------------------- MORE 버튼 시작 ----------------------------------- */
+
+.more_btn {
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px auto;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    position: relative; 
+    top: 15px;
+    box-shadow: 2px 2px 0px 0px rgb(117, 199, 117);
+}
+
+/* ----------------------------------- MORE 버튼 시작 ----------------------------------- */
+
+
+
+/* ----------------------------------- ★ 하단 소개 영역 시작 ★ ----------------------------------- */
+footer{
+    background: #1F1F1F;
+    display: flex;
+    padding: 30px;
+}
+footer > div:first-child{
+    flex: 3;
+    color: #f1f1f1;
+    text-align: right;
+}
+footer > div:last-child{
+    flex: 9;
+    color: #f1f1f1;
+    margin-left: 80px;
+}
+/* ----------------------------------- 하단 소개 영역 끝 ----------------------------------- */
